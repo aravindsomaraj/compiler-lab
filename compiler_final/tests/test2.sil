@@ -1,0 +1,29 @@
+decl
+integer n,i,fi[10];
+enddecl
+
+integer main ()
+{
+    begin
+
+    n = 5;
+    i = 0;
+    while n> i do
+        fi[i] = i+1 ;
+        i = i+1;
+    endwhile;
+
+    i= 0;
+    while n>i do
+        if fi[i]%2 == 0 then
+            write (" even ");
+        else
+            write (" odd ");
+        endif 
+        i = i+1;
+    endwhile;
+
+    return 0; 
+
+    end
+}

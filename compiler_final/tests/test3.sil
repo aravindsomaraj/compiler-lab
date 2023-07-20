@@ -1,0 +1,27 @@
+decl
+integer a,b,c,d;
+integer e,g,h;
+boolean f;
+enddecl
+
+integer main ()
+{
+    begin
+
+    a = 7-2;
+    b = 1*2;
+    c = 4*2;
+    e = 0;
+    e = 7 * 3;
+
+
+    f = 4 > 1;
+    f = 4 != 1;
+    f = 4 != 4;
+
+    write ( a );
+
+    return 0;
+    
+    end
+}

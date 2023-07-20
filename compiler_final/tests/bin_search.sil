@@ -1,0 +1,44 @@
+decl
+	integer binarysearch(integer start, integer end);
+	integer array[10];
+	integer key;
+enddecl
+
+integer binarysearch (integer start, integer end) {
+	decl
+		integer mid, temp;
+	enddecl
+begin
+	if (start <= end) then
+		mid = (start + end)/2;
+		if (array[mid]==key) then
+			temp = mid;
+		else
+			if(array[mid] > key) then
+				temp = binarysearch(mid+1,end);
+			else
+				temp = binarysearch(start, mid-1);
+			endif;
+		endif;
+	else
+		temp = -1;
+	endif;
+	return temp;
+end
+}
+
+integer main(){
+	decl
+		integer test;
+	enddecl
+begin
+	test = 1;
+	while (test < 10) do
+		array[test] = test;
+		test = test + 1;
+	endwhile;
+	test = binarysearch (1,9);
+	write(test);
+	return 0;
+end
+}

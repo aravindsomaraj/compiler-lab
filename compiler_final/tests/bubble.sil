@@ -1,0 +1,53 @@
+decl
+	integer bubble(integer n);
+	integer a[5];
+enddecl
+
+integer bubble (integer n) {
+	decl
+		integer i,j,temp;
+	enddecl
+begin
+	i = 0;
+	j = 0;
+	while i < n do
+
+	while j < (n-i-1) do
+		if a[j] > a[j+1] then
+			temp = a[j];
+			a[j] = a[j+1];
+			a[j+1] = temp;
+		endif
+		j = j + 1;
+	endwhile;
+	j = 0;
+	i = i + 1;
+	endwhile;
+	
+	return 0; 
+end
+}
+
+
+integer main(){
+decl
+	integer temp;
+enddecl
+begin
+	temp = 0;
+	while temp < 5 do
+		read(a[temp]);
+		temp = temp + 1;
+	endwhile;
+
+	bubble(5);
+
+	temp = 0;
+	while temp < 5 do
+		write(a[temp]);
+		temp = temp + 1;
+	endwhile;
+	
+	return 0;
+end
+}

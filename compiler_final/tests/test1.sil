@@ -1,0 +1,63 @@
+decl
+integer a,b,c,d;
+integer e,f,g,h;
+boolean ee,ff,gg,hh;
+integer watch(integer a;boolean b,c),z;
+enddecl
+
+integer watch (integer a;boolean b,c)
+{
+    decl
+    boolean g;
+    integer d;
+    enddecl
+
+    begin
+    a = 8;
+    d = e * 5;
+    g = 6>=5;
+    d = 0;
+    for (a =0; a < 10; a = a+1)
+    {
+        write (a);
+        d = d +a; 
+    }
+    write ( 1+7/3 + a);
+    write ("It is nice  to be here\n");
+    if false then 
+    write(d);
+    endif
+    return a;
+    end
+}
+
+integer main ()
+{
+    begin
+
+    a = 7-2;
+    b = 1*2;
+    c = 4*2;
+    e = 0;
+
+    write (1+9);
+    
+    if 2 > 3 then
+    b = 11;
+    else
+    c = 11;
+    endif
+    
+    while c>0 do
+    d = 11;
+    e = 22;
+    c = c-1;
+    endwhile ;
+    
+    write ( "ab dc" );
+    a = watch (3,true, true);
+    read (a);
+    return 0;
+    
+    end
+}

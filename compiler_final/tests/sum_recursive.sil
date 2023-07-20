@@ -1,0 +1,26 @@
+decl
+	integer sum(integer a);
+enddecl
+
+integer sum (integer a) {
+	decl
+		integer temp;
+	enddecl
+begin
+	if (a == 1) then temp = 1;
+	else temp = a + sum(a-1);
+	endif
+	return (temp);
+end
+}
+
+integer main(){
+decl
+	integer temp;
+enddecl
+begin
+	temp = sum (50);
+	write(temp);
+	return 0;
+end
+}

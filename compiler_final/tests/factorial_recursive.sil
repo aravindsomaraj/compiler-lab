@@ -1,0 +1,32 @@
+decl
+	integer factorial(integer a);
+	integer no;
+enddecl
+
+integer factorial (integer a) {
+	decl
+		integer temp;
+	enddecl
+begin
+	if (a == 1) then temp = 1;
+	else temp = a*factorial(a-1);
+	endif
+	return (temp);
+end
+}
+
+integer main(){
+decl
+	integer temp;
+enddecl
+begin	write("Enter a number\n");
+	read(no);
+	temp = factorial (no);
+	write("Factorial of");
+	write(no);
+	write("=");
+	write(temp);
+	write("\n");
+	return 0;
+end
+}
